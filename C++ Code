@@ -1,0 +1,39 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int terms;
+    double pi = 0;
+        int choice;
+        cout<<"if you want to begain the program press 1:";
+        cin >>choice;
+
+
+while(choice==1){
+        cout << "Input the number of terms to approximate pi to." << endl;
+        cin >> terms;
+
+        if (terms > 0)
+        {
+            for (int i = 0; i <((terms)); i++)
+            {
+                pi += 4 * (pow(-1,(i)))/((2*(i))+1); //
+            }
+
+            cout << "The approximated value of pi is: " << pi << "." << endl << endl;
+
+
+        }
+        else cout << endl << "You did not enter a valid value.\n" << endl;
+
+        pi=0;
+        cout<<"if you want to repeat choose 1 else enter any number :";
+        cin >>choice;
+
+}
+cout<<"Thankyou for using this program ^_^"<<endl;
+    return 0;
+}
+
